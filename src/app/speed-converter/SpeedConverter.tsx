@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 
 const translations = {
@@ -18,7 +20,7 @@ const translations = {
   },
 };
 
-const SpeedConverterPage: React.FC = () => {
+const SpeedConverterClient: React.FC = () => {
   const [language, setLanguage] = useState<"ko" | "en">("ko");
 
   const [kmh, setKmh] = useState<string>("");
@@ -74,57 +76,55 @@ const SpeedConverterPage: React.FC = () => {
   };
 
   return (
-    <div className="w-screen flex items-center justify-center">
-      <div className="relative max-w-md w-full bg-white rounded-xl shadow-md px-8 py-12 text-center">
-        {/* 언어 전환 버튼 */}
-        <button
-          onClick={() => setLanguage(language === "ko" ? "en" : "ko")}
-          className="text-sm text-gray-500 underline absolute top-2 right-4"
-        >
-          {language === "ko" ? "English" : "한국어"}
-        </button>
+    <div className="relative max-w-md w-full bg-white rounded-xl shadow-md px-8 py-12 text-center">
+      {/* 언어 전환 버튼 */}
+      <button
+        onClick={() => setLanguage(language === "ko" ? "en" : "ko")}
+        className="text-sm text-gray-500 underline absolute top-2 right-4"
+      >
+        {language === "ko" ? "English" : "한국어"}
+      </button>
 
-        <h1 className="text-2xl font-bold mb-4 text-blue-600">{t.title}</h1>
-        <p className="text-gray-600 mb-6 text-sm leading-6">{t.instructions}</p>
+      <h1 className="text-2xl font-bold mb-4 text-blue-600">{t.title}</h1>
+      <p className="text-gray-600 mb-6 text-sm leading-6">{t.instructions}</p>
 
-        <div className="flex flex-col space-y-4 text-left">
-          <div>
-            <label className="block text-gray-700 mb-1">{t.kmhLabel}</label>
-            <input
-              type="number"
-              value={kmh}
-              onChange={(e) => handleKmhChange(e.target.value)}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 
+      <div className="flex flex-col space-y-4 text-left">
+        <div>
+          <label className="block text-gray-700 mb-1">{t.kmhLabel}</label>
+          <input
+            type="number"
+            value={kmh}
+            onChange={(e) => handleKmhChange(e.target.value)}
+            className="w-full border border-gray-300 rounded-md px-3 py-2 
                        focus:outline-none focus:border-blue-500"
-              placeholder="0"
-            />
-          </div>
-          <div>
-            <label className="block text-gray-700 mb-1">{t.mphLabel}</label>
-            <input
-              type="number"
-              value={mph}
-              onChange={(e) => handleMphChange(e.target.value)}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 
+            placeholder="0"
+          />
+        </div>
+        <div>
+          <label className="block text-gray-700 mb-1">{t.mphLabel}</label>
+          <input
+            type="number"
+            value={mph}
+            onChange={(e) => handleMphChange(e.target.value)}
+            className="w-full border border-gray-300 rounded-md px-3 py-2 
                        focus:outline-none focus:border-blue-500"
-              placeholder="0"
-            />
-          </div>
-          <div>
-            <label className="block text-gray-700 mb-1">{t.msLabel}</label>
-            <input
-              type="number"
-              value={ms}
-              onChange={(e) => handleMsChange(e.target.value)}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 
+            placeholder="0"
+          />
+        </div>
+        <div>
+          <label className="block text-gray-700 mb-1">{t.msLabel}</label>
+          <input
+            type="number"
+            value={ms}
+            onChange={(e) => handleMsChange(e.target.value)}
+            className="w-full border border-gray-300 rounded-md px-3 py-2 
                        focus:outline-none focus:border-blue-500"
-              placeholder="0"
-            />
-          </div>
+            placeholder="0"
+          />
         </div>
       </div>
     </div>
   );
 };
 
-export default SpeedConverterPage;
+export default SpeedConverterClient;

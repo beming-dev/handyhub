@@ -1,4 +1,5 @@
-"use client";
+"use client"; // 클라이언트 컴포넌트 선언
+
 import InputField from "@/components/InputField";
 import React, { useState, useEffect } from "react";
 
@@ -39,7 +40,7 @@ const translations = {
   },
 };
 
-const CompoundInterestCalculator: React.FC = () => {
+const CompoundInterestCalculatorClient: React.FC = () => {
   // 언어 상태: "ko"(한국어) 또는 "en"(영어)
   const [language, setLanguage] = useState<"ko" | "en">("ko");
 
@@ -50,7 +51,7 @@ const CompoundInterestCalculator: React.FC = () => {
   const [compound, setCompound] = useState<number | "">("");
   const [result, setResult] = useState<string | null>(null);
 
-  // 브라우저 언어에 따라 초기 설정
+  // 브라우저 언어에 따라 초기 설정 (CSR에서만 가능)
   useEffect(() => {
     const browserLang = navigator.language.substring(0, 2).toLowerCase();
     if (browserLang === "en") {
@@ -60,7 +61,7 @@ const CompoundInterestCalculator: React.FC = () => {
     }
   }, []);
 
-  // 편의상 숫자로 파싱해주는 함수
+  // 숫자로 변환 함수
   const parseValue = (value: number | "" | string) => {
     if (value === "") return NaN;
     return typeof value === "string" ? parseFloat(value) : value;
@@ -86,78 +87,76 @@ const CompoundInterestCalculator: React.FC = () => {
   const t = translations[language];
 
   return (
-    <div className="w-screen min-h-screen flex items-center justify-center bg-gray-50 px-4">
-      <div className="relative max-w-md w-full bg-white rounded-xl shadow-md px-8 py-12 text-center">
-        {/* 우측 상단 언어 전환 버튼 */}
-        <button
-          onClick={() => setLanguage(language === "ko" ? "en" : "ko")}
-          className="text-sm text-gray-500 underline absolute top-2 right-4 bg-transparent"
-        >
-          {language === "ko" ? "English" : "한국어"}
-        </button>
+    <div className="relative max-w-md w-full bg-white rounded-xl shadow-md px-8 py-12 text-center">
+      {/* 우측 상단 언어 전환 버튼 */}
+      <button
+        onClick={() => setLanguage(language === "ko" ? "en" : "ko")}
+        className="text-sm text-gray-500 underline absolute top-2 right-4 bg-transparent"
+      >
+        {language === "ko" ? "English" : "한국어"}
+      </button>
 
-        <h1 className="text-2xl font-bold mb-4 text-blue-600">
-          {t.calculatorTitle}
-        </h1>
-        <p className="text-gray-600 mb-6 text-sm leading-6">
-          {t.instructionsLine1}
-          <br />
-          {t.instructionsLine2}
-        </p>
+      <h1 className="text-2xl font-bold mb-4 text-blue-600">
+        {t.calculatorTitle}
+      </h1>
+      <p className="text-gray-600 mb-6 text-sm leading-6">
+        {t.instructionsLine1}
+        <br />
+        {t.instructionsLine2}
+      </p>
 
-        {/* 인풋 필드 영역 */}
-        <div className="flex flex-col space-y-4 text-left">
-          <InputField
-            label={t.principalLabel}
-            type="number"
-            placeholder={t.principalPlaceholder}
-            value={principal}
-            onChange={(e) => setPrincipal(e.target.value)}
-          />
+      {/* 인풋 필드 영역 */}
+      <div className="flex flex-col space-y-4 text-left">
+        <InputField
+          label={t.principalLabel}
+          type="number"
+          placeholder={t.principalPlaceholder}
+          value={principal}
+          onChange={(e: any) => setPrincipal(e.target.value)}
+        />
 
-          <InputField
-            label={t.rateLabel}
-            type="number"
-            placeholder={t.ratePlaceholder}
-            value={rate}
-            onChange={(e) => setRate(e.target.value)}
-          />
+        <InputField
+          label={t.rateLabel}
+          type="number"
+          placeholder={t.ratePlaceholder}
+          value={rate}
+          onChange={(e: any) => setRate(e.target.value)}
+        />
 
-          <InputField
-            label={t.yearsLabel}
-            type="number"
-            placeholder={t.yearsPlaceholder}
-            value={years}
-            onChange={(e) => setYears(e.target.value)}
-          />
+        <InputField
+          label={t.yearsLabel}
+          type="number"
+          placeholder={t.yearsPlaceholder}
+          value={years}
+          onChange={(e: any) => setYears(e.target.value)}
+        />
 
-          <InputField
-            label={t.compoundLabel}
-            type="number"
-            placeholder={t.compoundPlaceholder}
-            value={compound}
-            onChange={(e) => setCompound(e.target.value)}
-          />
-        </div>
-
-        <button
-          onClick={handleCalculate}
-          className="mt-6 w-full bg-blue-600 text-white py-2 rounded-md 
-                   hover:bg-blue-700 focus:outline-none transition-colors"
-        >
-          {t.calculateButton}
-        </button>
-
-        {/* 결과 영역 */}
-        {result && (
-          <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-md">
-            <p className="text-blue-800 text-sm">{t.resultLabel}</p>
-            <p className="text-xl font-semibold text-blue-600">{result}</p>
-          </div>
-        )}
+        <InputField
+          label={t.compoundLabel}
+          type="number"
+          placeholder={t.compoundPlaceholder}
+          value={compound}
+          onChange={(e: any) => setCompound(e.target.value)}
+        />
       </div>
+
+      <button
+        onClick={handleCalculate}
+        className="mt-6 w-full bg-blue-600 text-white py-2 rounded-md 
+                   hover:bg-blue-700 focus:outline-none transition-colors"
+      >
+        {t.calculateButton}
+      </button>
+
+      {/* 결과 영역 */}
+      {result && (
+        <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-md">
+          <p className="text-blue-800 text-sm">{t.resultLabel}</p>
+          <p className="text-xl font-semibold text-blue-600">{result}</p>
+        </div>
+      )}
     </div>
   );
 };
 
-export default CompoundInterestCalculator;
+export default CompoundInterestCalculatorClient;
