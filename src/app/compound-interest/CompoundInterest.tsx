@@ -112,7 +112,9 @@ const CompoundInterestCalculatorClient: React.FC = () => {
           type="number"
           placeholder={t.principalPlaceholder}
           value={principal}
-          onChange={(e: any) => setPrincipal(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setPrincipal(parseInt(e.target.value))
+          }
         />
 
         <InputField
@@ -120,7 +122,9 @@ const CompoundInterestCalculatorClient: React.FC = () => {
           type="number"
           placeholder={t.ratePlaceholder}
           value={rate}
-          onChange={(e: any) => setRate(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setRate(parseInt(e.target.value))
+          }
         />
 
         <InputField
@@ -128,7 +132,9 @@ const CompoundInterestCalculatorClient: React.FC = () => {
           type="number"
           placeholder={t.yearsPlaceholder}
           value={years}
-          onChange={(e: any) => setYears(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setYears(parseInt(e.target.value))
+          }
         />
 
         <InputField
@@ -136,7 +142,9 @@ const CompoundInterestCalculatorClient: React.FC = () => {
           type="number"
           placeholder={t.compoundPlaceholder}
           value={compound}
-          onChange={(e: any) => setCompound(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setCompound(parseInt(e.target.value))
+          }
         />
       </div>
 

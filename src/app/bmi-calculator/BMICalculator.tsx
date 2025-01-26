@@ -115,14 +115,18 @@ const BMICalculatorClient: React.FC = () => {
           type="number"
           placeholder={t.heightPlaceholder}
           value={height}
-          onChange={(e) => setHeight(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setHeight(parseInt(e.target.value))
+          }
         />
         <InputField
           label={t.weightLabel}
           type="number"
           placeholder={t.weightPlaceholder}
           value={weight}
-          onChange={(e) => setWeight(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setWeight(parseInt(e.target.value))
+          }
         />
       </div>
 
