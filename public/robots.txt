@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://handyhub-mu.vercel.app
+
+# Sitemaps
+Sitemap: https://handyhub-mu.vercel.app/sitemap.xml
