@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://mydomain.com
+Host: https://handyhub-mu.vercel.app
 
 # Sitemaps
-Sitemap: https://mydomain.com/sitemap.xml
+Sitemap: https://handyhub-mu.vercel.app/sitemap.xml
