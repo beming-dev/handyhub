@@ -43,9 +43,9 @@ const Home: React.FC = () => {
             href="/compound-interest"
             className="flex flex-col items-center justify-center bg-white rounded-lg shadow hover:shadow-md transition p-6"
           >
-            <h2 className="text-xl font-semibold text-blue-600 mb-2">
+            <h1 className="text-xl font-semibold text-blue-600 mb-2">
               Compound Interest
-            </h2>
+            </h1>
             <p className="text-gray-500 text-sm">
               Calculate compounded interest
             </p>
@@ -56,9 +56,9 @@ const Home: React.FC = () => {
             href="/bmi-calculator"
             className="flex flex-col items-center justify-center bg-white rounded-lg shadow hover:shadow-md transition p-6"
           >
-            <h2 className="text-xl font-semibold text-green-600 mb-2">
+            <h1 className="text-xl font-semibold text-green-600 mb-2">
               BMI Calculator
-            </h2>
+            </h1>
             <p className="text-gray-500 text-sm">
               Check your BMI and weight category
             </p>
@@ -69,9 +69,9 @@ const Home: React.FC = () => {
             href="/text-counter"
             className="flex flex-col items-center justify-center bg-white rounded-lg shadow hover:shadow-md transition p-6"
           >
-            <h2 className="text-xl font-semibold text-indigo-600 mb-2">
+            <h1 className="text-xl font-semibold text-indigo-600 mb-2">
               Text Counter
-            </h2>
+            </h1>
             <p className="text-gray-500 text-sm">
               Count characters with/without spaces
             </p>
@@ -82,9 +82,9 @@ const Home: React.FC = () => {
             href="/length-converter"
             className="flex flex-col items-center justify-center bg-white rounded-lg shadow hover:shadow-md transition p-6"
           >
-            <h2 className="text-xl font-semibold text-indigo-600 mb-2">
+            <h1 className="text-xl font-semibold text-indigo-600 mb-2">
               Length Converter
-            </h2>
+            </h1>
             <p className="text-gray-500 text-sm">cm, inch, feet, meter</p>
           </Link>
 
@@ -93,9 +93,9 @@ const Home: React.FC = () => {
             href="/weight-converter"
             className="flex flex-col items-center justify-center bg-white rounded-lg shadow hover:shadow-md transition p-6"
           >
-            <h2 className="text-xl font-semibold text-indigo-600 mb-2">
+            <h1 className="text-xl font-semibold text-indigo-600 mb-2">
               Weight Converter
-            </h2>
+            </h1>
             <p className="text-gray-500 text-sm">kg, lb, g</p>
           </Link>
 
@@ -104,9 +104,9 @@ const Home: React.FC = () => {
             href="/temperature-converter"
             className="flex flex-col items-center justify-center bg-white rounded-lg shadow hover:shadow-md transition p-6"
           >
-            <h2 className="text-xl font-semibold text-red-600 mb-2">
+            <h1 className="text-xl font-semibold text-red-600 mb-2">
               Temperature Converter
-            </h2>
+            </h1>
             <p className="text-gray-500 text-sm">Celsius ↔ Fahrenheit</p>
           </Link>
 
@@ -115,9 +115,9 @@ const Home: React.FC = () => {
             href="/speed-converter"
             className="flex flex-col items-center justify-center bg-white rounded-lg shadow hover:shadow-md transition p-6"
           >
-            <h2 className="text-xl font-semibold text-purple-600 mb-2">
+            <h1 className="text-xl font-semibold text-purple-600 mb-2">
               Speed Converter
-            </h2>
+            </h1>
             <p className="text-gray-500 text-sm">km/h, mph, m/s</p>
           </Link>
 
@@ -126,9 +126,9 @@ const Home: React.FC = () => {
             href="/pressure-converter"
             className="flex flex-col items-center justify-center bg-white rounded-lg shadow hover:shadow-md transition p-6"
           >
-            <h2 className="text-xl font-semibold text-teal-600 mb-2">
+            <h1 className="text-xl font-semibold text-teal-600 mb-2">
               Pressure Converter
-            </h2>
+            </h1>
             <p className="text-gray-500 text-sm">Pa, atm, bar</p>
           </Link>
         </div>
