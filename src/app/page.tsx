@@ -101,7 +101,7 @@ const Home: React.FC = () => {
 
           {/* Temperature Converter */}
           <Link
-            href="/temp-converter"
+            href="/temperature-converter"
             className="flex flex-col items-center justify-center bg-white rounded-lg shadow hover:shadow-md transition p-6"
           >
             <h2 className="text-xl font-semibold text-red-600 mb-2">
