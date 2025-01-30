@@ -113,7 +113,7 @@ const LengthConverterClient: React.FC = () => {
             value={cm}
             onChange={(e) => handleCmChange(e.target.value)}
             className="w-full border border-gray-300 rounded-md px-3 py-2 
-                       focus:outline-none focus:border-blue-500"
+                       focus:outline-none focus:border-blue-500 text-black"
             placeholder="0"
           />
         </div>
@@ -124,7 +124,7 @@ const LengthConverterClient: React.FC = () => {
             value={inch}
             onChange={(e) => handleInchChange(e.target.value)}
             className="w-full border border-gray-300 rounded-md px-3 py-2 
-                       focus:outline-none focus:border-blue-500"
+                       focus:outline-none focus:border-blue-500 text-black"
             placeholder="0"
           />
         </div>
@@ -135,7 +135,7 @@ const LengthConverterClient: React.FC = () => {
             value={feet}
             onChange={(e) => handleFeetChange(e.target.value)}
             className="w-full border border-gray-300 rounded-md px-3 py-2 
-                       focus:outline-none focus:border-blue-500"
+                       focus:outline-none focus:border-blue-500 text-black"
             placeholder="0"
           />
         </div>
@@ -146,7 +146,7 @@ const LengthConverterClient: React.FC = () => {
             value={meter}
             onChange={(e) => handleMeterChange(e.target.value)}
             className="w-full border border-gray-300 rounded-md px-3 py-2 
-                       focus:outline-none focus:border-blue-500"
+                       focus:outline-none focus:border-blue-500 text-black"
             placeholder="0"
           />
         </div>

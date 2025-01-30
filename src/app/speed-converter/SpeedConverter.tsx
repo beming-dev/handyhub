@@ -96,7 +96,7 @@ const SpeedConverterClient: React.FC = () => {
             value={kmh}
             onChange={(e) => handleKmhChange(e.target.value)}
             className="w-full border border-gray-300 rounded-md px-3 py-2 
-                       focus:outline-none focus:border-blue-500"
+                       focus:outline-none focus:border-blue-500 text-black"
             placeholder="0"
           />
         </div>
@@ -107,7 +107,7 @@ const SpeedConverterClient: React.FC = () => {
             value={mph}
             onChange={(e) => handleMphChange(e.target.value)}
             className="w-full border border-gray-300 rounded-md px-3 py-2 
-                       focus:outline-none focus:border-blue-500"
+                       focus:outline-none focus:border-blue-500 text-black"
             placeholder="0"
           />
         </div>
@@ -118,7 +118,7 @@ const SpeedConverterClient: React.FC = () => {
             value={ms}
             onChange={(e) => handleMsChange(e.target.value)}
             className="w-full border border-gray-300 rounded-md px-3 py-2 
-                       focus:outline-none focus:border-blue-500"
+                       focus:outline-none focus:border-blue-500 text-black"
             placeholder="0"
           />
         </div>
